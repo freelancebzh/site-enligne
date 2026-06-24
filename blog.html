@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Blog & Actu - Le relais de poste</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Barre de filtres par thèmes */
+        .theme-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #e0e0e0;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #999;
+            background-color: #f5f5f5;
+        }
+
+        /* États actifs personnalisés pour chaque couleur de thème */
+        .filter-btn.active[data-filter="all"] { background-color: #333; color: #fff; border-color: #333; }
+        .filter-btn.active[data-filter="gite"] { background-color: #ff9100; color: #fff; border-color: #ff9100; }
+        .filter-btn.active[data-filter="local"] { background-color: #0d47a1; color: #fff; border-color: #0d47a1; }
+        .filter-btn.active[data-filter="ecolo"] { background-color: #1b5e20; color: #fff; border-color: #1b5e20; }
+
+        /* Conteneur d'articles */
+        .blog-grid {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .blog-article {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Badges de thèmes */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        .badge-gite { background-color: #fff3e0; color: #e65100; }
+        .badge-actu { background-color: #e3f2fd; color: #0d47a1; }
+        .badge-ecolo { background-color: #e8f5e9; color: #1b5e20; }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #757575;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .blog-article h2 { margin: 0.5rem 0; color: #333; }
+        .blog-article p { line-height: 1.6; color: #424242; text-align: justify; }
+
+        /* Section Newsletter */
+        .newsletter-box {
+            background-color: #f1f8e9;
+            border: 2px dashed #81c784;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .newsletter-form { max-width: 500px; margin: 1.5rem auto 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+        .newsletter-input { padding: 0.8rem; border: 1px solid #a5d6a7; border-radius: 4px; font-size: 1rem; width: 100%; box-sizing: border-box; }
+        .newsletter-btn { background-color: #2e7d32; color: white; border: none; padding: 0.8rem 2rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .newsletter-btn:hover { background-color: #1b5e20; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="photos/general/logo.png" alt="logo le relais de poste 35 qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="offre.html">L'Offre</a></li>
+                <li><a href="tarifs.html">Services & Tarifs</a></li>
+                <li><a href="tourisme.html">Tourisme</a></li>
+                <li><a href="propos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html" class="active">Blog & Actu</a></li>
+                <li>
+    <a href="english.html" style="display: flex; align-items: center; gap: 7px; text-decoration: none;">
+        <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" style="width: 20px; height: auto; display: inline-block;"> 
+        English
+    </a>
+</li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="container">
+
+    <div class="page-header">
+        <h1>Le Blog du Studio</h1>
+        <p>Découvrez la vie au gite, les actualités de Domagné ainsi que nos éco-conseils.</p>
+    </div>
+
+    <div class="theme-filter-bar">
+        <button class="filter-btn active" data-filter="all">Tout voir</button>
+        <button class="filter-btn" data-filter="gite">🏠 Actu du Gîte</button>
+        <button class="filter-btn" data-filter="local">📍 Actu Locale</button>
+        <button class="filter-btn" data-filter="ecolo">🌱 Développement Durable</button>
+    </div>
+	
+	<p>Filtrer par thématiques clés : 
+    <a href="#construction">#construction</a> | 
+    <a href="#compost">#zero-dechet</a>
+</p>
+
+    <div class="blog-grid">
+<!-- ÉTAPE FUTURE : Pour ajouter un article copier-coller le bloc <article> ci-dessus juste ici -->
+
+<!-- article suivant ------------------------------------------------------------------------------- -->
+<!-- article suivant ------------------------------------------------------------------------------- -->
+<!-- article suivant ------------------------------------------------------------------------------- -->
+<!-- article suivant ------------------------------------------------------------------------------- -->
+<!-- article suivant ------------------------------------------------------------------------------- -->
+<!-- article suivant ------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- article suivant ---------------CASSIS---------------------------------------------------------------- -->
+
+         <article class="blog-article" data-theme="ecolo">
+            <span class="blog-meta">
+                <span class="badge badge-ecolo">Développement Durable</span> Publié le 21 juin 2026
+            </span>
+            <h2>Circuit court garanti !</h2>
+            <p>Le covid avait donné un semblant de retour aux sources ; en étant pas autosuffisants nous dépendons des autres et des aléas de la conjoncture.<br>
+			Nous ne sommes CLAIREMENT pas autosuffisant à notre niveau mais nous pouvons, pour quelques aspects garantir une origine bio et locale (le jardin)<br>
+			la récolte du jour permettra, avec le concours de mes parents qui ont le savoir faire et les outils, de proposer (un peu) de confiture.</p>
+			
+			
+<!-- photo de l article ------------------------------------------------------------------------------- -->			
+			
+			
+	<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/developpement durable/cassis-du-jardin.jpg" alt="collecte des cassis de notre jardin le 21 juin 2026" style="width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        De quoi faire quelques pots de confiture de cassis
+    </figcaption>
+</figure>
+	
+        </article>
+		
+		
+		
+		
+<!-- article suivant ---------------BAC RECUP EAU---------------------------------------------------------------- -->		
+		
+         <article class="blog-article" data-theme="ecolo">
+            <span class="blog-meta">
+                <span class="badge badge-ecolo">Développement Durable</span> Publié le 20 juin 2026
+            </span>
+            <h2>Installation d'un des bacs de recupération d'eau de pluie</h2>
+            <p>L'eau est essencielle et elle est de plus en plus rare et ce <a href="https://www.ouest-france.fr/meteo/canicule/un-episode-dune-intensite-exceptionnelle-la-bretagne-placee-en-vigilance-rouge-canicule-une-premiere-depuis-2022-64279f52-6d7c-11f1-bda1-40414195e76f" target="_blank">même en bretagne</a> où les épisodes caniculaires sont de plus en plus fréquents.<br>
+			Beaucoup d'eau est perdue aussi et dans notre foyer nous faisons le maximum pour la récupérée. Le bac installé aujourd'hui près de l'abri de jardin était auparavant près de la maison et venait d'un toit en amiante. Autant vous dire que mis à part les fleurs vous ne pouvez rien arroser.<br>
+			Le bac a donc été déplacé et il se chargera de récupérer l'eau de l'abri de jardin.</p>
+			
+			
+<!-- photo de l article ------------------------------------------------------------------------------- -->			
+			
+			
+	<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/developpement durable/bac-de-recuperation-eau-de-pluie-deplace-proximite-abris-jardin.jpg" alt="le bac qui était à côté de la maison est maintenant à côté de l'abri de jardin" style="width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Le "nouveau bac" à proximité de l'abri de jardin
+    </figcaption>
+</figure>
+	
+        </article>
+		
+		
+<!-- article suivant ---------LE TROU REBOUCHE---------------------------------------------------------------------- -->		
+		
+		<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 19 juin 2026
+    </span>
+    <h2>Il faut reboucher le trou</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>Lors du creusement du trou une petite erreur d'appréciation a été comise : la dalle de mon <a href="https://studio-francais.fr/" target="_blank">studio français</a> doit faire 25 cm dont 5 cm au dessus du sol mais le trou en fait 40 !<br>
+	J'ai donc entrepris sur les dernières semaines de remmettre la terre qui avait été enlevée pour que tout soit parfait et conforme aux préconisations de construction.<br>
+	Ce trou sera l'occasion de récupérer de la terre végétale mais aussi de réutiliser des gravas de béton et de parpaings qui ont été récupérés ou concervés de réaménagement antérieurs</p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/le-trou-en-juin-2026.jpg" alt="le trou tel qu'il apparait en juin 2026 après que des brouettes de terre l'on recomblé" style="width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Au moins 60 brouettes pleines de terre on été utilisées
+    </figcaption>
+</figure>
+</article>		
+
+<!-- article suivant ---------------DEPOT DU PERMIS OFFICIEL---------------------------------------------------------------- -->
+
+
+		<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 17 juin 2026
+    </span>
+    <h2>C'est parti pour deux mois d'attente</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>Le permis a été déposé en ligne le 17 juin 2026 par <a href="https://www.rapide-permisdeconstruire.fr/" target="_blank">LIKIO</a> et il y a deux moins d'instruction. Si je n'ai aucune nouvelle ou de demande complémentaire des services d'urbanisme de Vitré d'ici là je commencer. Il y aura donc le coulage de la dalle et le paiement du solde de ma commande de mon <a href="https://studio-francais.fr/" target="_blank">studio français</a>.<br>
+	Comme j'ai du temps, je me projete ! Une fois n'est pas coutume c'est du premier coup que le meilleur visuel de <a href="https://gemini.google.com/" target="_blank">Gemini</a> est sorti :</p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="l'ia de google a imaginé un jardin absolument magnifique" style="width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        La qualité est bleuffante et tout semble réel : je veux exactement la même chose.
+    </figcaption>
+</figure>
+</article>
+
+<!-- article suivant --------CHAUFFE EAU SOLAIRE----------------------------------------------------------------------- -->
+
+
+
+
+        <article class="blog-article" data-theme="ecolo">
+            <span class="blog-meta">
+                <span class="badge badge-ecolo">Développement Durable</span> Publié le 12 juin 2026
+            </span>
+            <h2>Chauffe eau solaire</h2>
+            <p>Parce que la préservation de notre environnement <a href="propos.html">est au cœur de nos valeurs</a>, le Studio va être équipé d'un  <a href="https://www.castorama.fr/mkp/collecteur-pressuris-thunder-avec-r-servoir-250l-1-pi-ce-/5904161756606_CAFR.prd?" target="_blank">chauffe eau solaire</a>. Largement répendu dans les pays méditéranéen et notament à Chypre où nous avons vécu 5 années, ce système est encore peu développé à nos latitides.<br>
+Ce n'est pas parce que cela n'existe pas que c'est impossible ! c'est surtout que notre logement disposera d'une exposition plein sud sans ombrage et que le système est associé à une résistance auxiliaire de 3000W ; autrement dit cela reste fiable avec le moindre ensoleillement en hiver. </p>
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        
+        <img src="photos/blog/developpement durable/chauffe-eau-solaire-sur-un-toit-au-maroc.jpg" alt="un chauffe eau solaire tel qu'on en trouve dans les pays du sud" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+		<img src="photos/blog/developpement durable/chauffe-eau-solaire-selectionne-chalet-chaumere.jpg" alt="le chauffe eau solaire de la place de marché castorama" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Dans le sud les chauffe-eau sont légions et TOUTES les maisons et appartement en dispose. A droite le chauffe qui équipera notre studio.
+    </figcaption>
+</figure>
+        </article>
+		
+		<!-- article suivant ---------------LE PERMIS EST DEPOSE---------------------------------------------------------------- -->
+	
+		<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 17 juin 2026
+    </span>
+    <h2>Le permis est déposé !</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>Après six versions du permis de construire celui ci est enfin déposé. Petite frayeur au dernier moment avec le formulaire RE2020 manquant. En fait il est disponible gratuitement et directement sur le site <a href="https://rt-re-batiment.developpement-durable.gouv.fr/attestations-de-respect-de-la-re2020-a108.html" target="_blank">gouvernemental du déveloippement durable</a>. Et là on réalise que c'est vraiment lancé avec un image en situation</p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/image du studio par likio.jpg" alt="image ia du chalet en situation avec l'environement réel" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/le chalet sur le permis.jpg" alt="le chalet tel qu'il apparait sur le plan du permis de construire" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Mon permis de construire déposé en 2026 permet de voir le chalet PARFAITEMENT en sitation
+    </figcaption>
+</figure>
+</article>
+
+<!-- article suivant ------------LE PREMIER SITE WEB------------------------------------------------------------------- -->
+
+
+		<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 30 avril 2026
+    </span>
+    <h2>Je me lance dans la conception de site web</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>En tant qu'agent de tri je suis un peu déconnecté de l'ia au travail. lorsque j'ai quitté la banque l'ia ne servait alors qu'à orienté le client vers le bon service (aujourd'hui elle analyse la conformité de la réponse et demain...elle répondra). Je ne vois donc l'ia qu'en utilisation au jour le jour (et cela à notamment remplacé les recherches google). J'ai voulu testé une des fonctionnalités première de l'ia : le code et la programmation. En vrai c'est mon 3ème essai et cette fois-ci c'est avec <a href="https://gemini.google.com/" target="_blank">Gemini</a>. C'est en tout ca passionnant et vraiment intéressant ; un nouveau monde s'est ouvert<br>
+	</p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <img src="photos/blog/actu du gite/Premiere-tentative-de-site-web.jpg" alt="première version du site internet réalisé par l'ia de gemini" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+    
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Première tentative de site web
+    </figcaption>
+</figure>
+
+</article>
+
+<!-- article suivant -----------LE CHANTIER-------------------------------------------------------------------- -->
+	
+	<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 15 avril 2026
+    </span>
+    <h2>Le chantier</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>Mon père a voulu me faire plaisir en prenant les devant et en creusant un trou pour la dalle ; c'etait 20 cm de trop mais suffisant pour faire un gabari grandeur nature et mieux comprendre comment positionné le chalet </p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/avant le trou pour le chalet.jpg" alt="le terrain avant que le trou ne soit creusé" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/le trou pour le chalet.jpg" alt="le même terrain d'un autre angle avec le trou creusé" style="width: 50%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        On a beau prendre plein de photos ; il n'y en a jamais assez !
+    </figcaption>
+</figure>
+	
+</article>
+
+<!-- article suivant -----------LE PLAN DU STUDIO-------------------------------------------------------------------- -->
+
+	<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 26 mars 2026
+    </span>
+    <h2>On s'amuse</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>Une fois que Likio est lancé sur un projet, on sait que ça prend du temps, mais que le résultat arrive ! Du coup, on s'amuse avec ma mère à imaginer l'aménagement intérieur grâce à l'IA. On passe de <a href="https://gemini.google.com/" target="_blank">Gemini</a> à <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> et même<a href="https://claude.ai/" target="_blank"> Claude </a>pour essayer d'obtenir quelque chose de vivable, avec plus ou moins de succès.<br>
+	Bilan des courses? Gemini n'est pas mal car il est moins limité en nombre de requêtes mais il fait vite n'importe quoi !</p>
+	
+			    <figure style="max-width: 600px; margin: 25px auto; text-align: center; display: block;">
+        <img src="photos/blog/actu du gite/exemple de plan intérieur par ia.jpg" alt="resultat d'une requette sur gémini" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+        
+        <figcaption style="font-family: Arial, sans-serif !important; font-size: 0.85rem !important; color: #555555 !important; font-style: italic !important; display: block !important; text-align: center !important; margin-top: 8px !important;">
+            Beaucoup de temps et souvent des incohérences mais une chose est sure : c'est bleuffant !
+        </figcaption>
+    </figure>
+	
+</article>
+
+<!-- article suivant -------------LE CONSTRUCTION DU PERMIS DE CONSTRUIRE------------------------------------------------------------------ -->
+
+	<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 26 mars 2026
+    </span>
+    <h2>Le permis</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>   S'agissant d'un surface supérieure à 20m2 le permis est obligatoire. Avec mon étudiant j'avais eu la notion quant aux coûts mais je ne m'attendais pas à un tel choc ! sur <a href="https://www.rapide-permisdeconstruire.fr/" target="_blank">LIKIO</a> le forfait est à 620€. Certes ils ne sont pas architectes mais comme l'ensemble fait moins de 150m2 il faut juste savoir remplir les cases et maitriser l'infographisme.<br>
+	Après un questionnaire assez long et pas mal de question la machine est lancée !</p>
+	
+			    <figure style="max-width: 600px; margin: 25px auto; text-align: center; display: block;">
+        <img src="photos/blog/actu du gite/le terrain avant la construction.jpg" alt="la parcelle avant la construction" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+        
+        <figcaption style="font-family: Arial, sans-serif !important; font-size: 0.85rem !important; color: #555555 !important; font-style: italic !important; display: block !important; text-align: center !important; margin-top: 8px !important;">
+            Etape essentielle avant : les photos ! pas de bol le jardin est en chantier.
+        </figcaption>
+    </figure>
+	
+</article>
+
+<!-- article suivant --------------LA COMMANDE DU CHALET----------------------------------------------------------------- -->
+
+	<article class="blog-article" data-theme="local">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du gîte</span> 23 mars 2026
+    </span>
+    <h2>La commande</h2>
+	<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    <p>   Quand on cherche un peu (et que sa mère maitrise internet), on peut remonter aux fournisseurs de certains magasins ; on a ainsi plus grand, plus flexible et vu que c'est moins cher on peut avoir mieux. Après des options intéressantes chez Leroy Merlin (et nos idées prennent vie !) nous commandons donc sur <a href="https://www.abri-francais.fr/" target="_blank">abri français</a> ou plus éxactement son petit frère : <a href="https://studio-francais.fr/" target="_blank">studio français</a>! Direct le RE2020 s'impose ; quand on connait le prix de l'isolation au m2 il vaut mieux prendre déjà tout fait et bien fait (on en reparlera à l'usage).<br/>
+	La commande est donc passée et celle-ci n'est à payer qu'une fois le permis de construire accepté.</p>
+	
+			    <figure style="max-width: 600px; margin: 25px auto; text-align: center; display: block;">
+        <img src="photos/blog/actu du gite/première image du studio.jpg" alt="image fournie par le site studio francais" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+        
+        <figcaption style="font-family: Arial, sans-serif !important; font-size: 0.85rem !important; color: #555555 !important; font-style: italic !important; display: block !important; text-align: center !important; margin-top: 8px !important;">
+            La première image concrête de notre futur studio.
+        </figcaption>
+    </figure>
+	
+</article>
+
+<!-- article suivant --------JANVIER 2026----------------------------------------------------------------------- -->
+
+<article class="blog-article" data-theme="gite">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du Gîte</span> janvier 2026
+    </span>
+    
+<h2>On entre dans le concret</h2>
+<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    
+<p>
+    L'idée du container est abandonné même si l'idée d'un sous-sol insolite au dessus d'un chalet qui ne paye pas de mine m'a franchement...intéressé. Un voyage effectué en aout 2024 à Oxford en Angleterre me donne une piste. Le problème est que cela nécessite une forte adaptation de la salle de bain et de la cuisine. Pourquoi? Tout simplement parce que ce super hôte airbnb <a href="https://www.airbnb.fr/users/profile/1462538894654127399?previous_page_name=PdpHomeMarketplace" target="_blank">super hôte airbnb</a> (qui loue depuis 13 ans et à 4.94* avec 853 évaluations) fait loger ses clients dans des abris de jardin... et c'est génial ! Pour un premier logement je décide d'offrir un espace plus important justement pour assurer un acceuil toute l'année<br/>
+    C'est surtout que lorsque l'on cherche abris on tombe vite sur les chalets et les studios de jardin habitables !
+</p>
+	
+<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/maison d'hôte à oxford dans un abris de jardin.jpg" alt="une surprenante chambre airbnb dans un abris de jardin" style="width: 33.33%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/l'intérieur de la maison d'hôte à oxford dans un abris de jardin.jpg" alt="intérieur chalereux d'un abris de jardin aménagé en airbnb" style="width: 33.33%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/les deux chalets airbnb à oxford.jpg" alt="les deux chalets côte à côte avec de la décoration dans le style britanique" style="width: 33.33%; height: auto; border-radius: 6px; object-fit: cover;">
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Les fameux airbnb dans des abris de jardin à Oxford (GB), il y en avait donc deux et son garage était aussi aménagé.
+    </figcaption>
+</figure>
+
+</article>	
+
+<!-- article suivant -------------ABANDON DE POSTE------------------------------------------------------------------ -->	
+  	
+	
+<article class="blog-article" data-theme="gite">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du Gîte</span> Actions de 2026
+    </span>
+    
+    <h2>Tout s'accélère</h2>
+    <a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    
+    <p>
+        Fin 2025 une disposition s'impose : le gîte ne pouvant pas être mis en face de la maison c'est donc le jardin de derrière qui s'impose avec l'idée de rester sur le container et de faire une maison écologique, économique et aussi passive ! </br>
+		Mais c'est la douche froide ; l'étudiant qui me suit depuis des années et qui est maintenant établi en tant qu'indépendant ne veut plus construire un projet qui n'entre pas en accord avec ses convictions et celui de son associé. De façon plus précise "ils considèrent que notre terrain et notre maison sont des espaces à privilégier et qu'ils ne veulent pas en compromettre la qualité ."<br>
+        Peu importe si la construction <a href="https://www.partners-finances.fr/financement-immobilier/actualites/2026/978-immobilier-neuf-permis-construire-chantiers-chute-libre-printemps-2026" target="_blank">est en chute libre et impacte l'économie</a> et qu'il est impossible de louer des petites surfaces, mon architecte ne veut pas construire un projet qui n’entre pas en accord avec ses convictions.</br>
+		Malgré le choc de cet abandon, cela a pour effet de bouleverser le projet : je dois faire en autoconstruction (c'était déjà prévu) mais surtout sans architecte !
+    </p>
+    </article>
+
+
+<!-- article suivant -------LOGO------------------------------------------------------------------------ -->	
+	
+<article class="blog-article" data-theme="gite">
+    <span class="blog-meta">
+        <span class="badge badge-gite">Actu du Gîte</span> Février 2026
+    </span>
+    
+    <h2>Logo et business plan</h2>
+    <a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+    
+    <p>
+        De formation commerciale je me suis toujours amusé à faire des business plan, je dis amusé car il n'y a jamais eu de projets concrets ensuite.<br>
+		J'ai eu cette fois ci l'occasion d'en faire un avec une VRAIE finalité. cela oblige à se poser un tas de questions, à voir ce qui se fait autour de chez moi mais aussi à mettre en place une vréritable politique commerciale et aux moyens de différenciation</br>
+		Je suis beaucoup l'actualité et je sais qu'airbnb à un impact sur l'économie et la disponibilté des logements sur le marché pour les locations longues durées. Dans notre cas c'est une construction qui est dès son origine destinée à la location touristique mais il n'empêche que l'on peut quand même agir.<br>
+        Dès cette prise de conscience une décision est prise : le logement s'inscrira dans l'activité économique du canton avec une version light d'un bail mobilité.<br>
+		<strong>Le principe?</strong> un étudiant ou un actif qui vient régulièrement et sur la durée dans ma zone.<br>
+		<strong>La conséquence?</strong> offrir à un étudiant en alternance un logement qu'il ne paye que lorsqu il est présent et qui est loué en location touristique dès qu'il le libère <a href="propos.html">et c'est un principe fondateur de notre logement</a> L'aspect écologique reste la base.</br>
+		
+    </p>
+	
+	<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/actu du gite/logo1.jpg" alt="logo avec un relais de poste, un cheval et un drapeau breton non conforme" style="width: 25%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/logo2.jpg" alt="logo avec une corne de postier avec un dolmen" style="width: 25%; height: auto; border-radius: 6px; object-fit: cover;">
+        <img src="photos/blog/actu du gite/logo3.jpg" alt="logo avec la maison et un cheval au dessus" style="width: 25%; height: auto; border-radius: 6px; object-fit: cover;">
+		<img src="logo.png" alt="logo actuel avec notre maison, un dolmen et une pomme en référence à domagné au dessus" style="width: 25%; height: auto; border-radius: 6px; object-fit: cover;">
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        les tests de logos pour notre maison d'hôte à dimension sociale.
+    </figcaption>
+</figure>
+    
+</article>
+
+<!-- article suivant ------------LE C3------------------------------------------------------------------- -->
+
+         <article class="blog-article" data-theme="ecolo">
+            <span class="blog-meta">
+                <span class="badge badge-ecolo">Développement Durable</span> Novembre 2026
+            </span>
+            <h2>Révolution électrique</h2>
+            <p>Nous sommes tous convaincus que l'electrique ce n'est pas pour nous car l'autonomie est trop faible. Elle n'est en réalité trop faible que pour quelques jours dans l'année et deux ou trois weekends. La réalité c'est que l'on parcours <a href="https://www.ladepeche.fr/2022/06/21/les-francais-parcourent-en-moyenne-plus-de-50-kilometres-par-jour-principalement-en-voiture-10386874.php" target="_blank">en moyenne 50 kms/jour</a>. <br>
+			Nous sommes madame et moi exactement à ce niveau avec 54 kms/jour de travail.<br>
+			En 2023 le gouvernement du Président Macron annonce, pour 2024, une offre de <a href="https://www.ecologie.gouv.fr/leasing-social" target="_blank">leasing social</a> pour les foyers dont le revenu fiscal par part en 2023 est inférieur 15.400€ et à plus de 15 kms du travail. Nous validons tous les critères et selectionnons la voiture la moins cher avec le minimum d'options pour 74€/mois et 15.000 kms/an.<br>
+La <a href="https://www.lacentrale.fr/fiche-technique-voiture-citroen-c3-iv+113+you+44+kwh+automatique-2024.html?version-id=26477368&modelCom=E-C3%20(4E%20GENERATION)" target="_blank">C3 you</a> designée en Inde et construite en Slovénie entre donc dans notre famille Franco-Russe en Bretagne.</p>
+			
+			
+			<figure style="max-width: 600px; margin: 25px auto; padding: 0; text-align: center; display: block;">
+    <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+        <img src="photos/blog/developpement durable/citroen-c3-you.jpg" alt="notre c3 you dans le jardin" style="width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        
+        
+    </div>
+    <figcaption style="font-size: 0.9em; color: #555555; text-align: center; font-style: italic; display: block; margin-top: 8px;">
+        Notre C3 you livrée avec 3 mois de retard
+    </figcaption>
+</figure>
+			
+			
+        </article>
+		
+<!-- article suivant -----------2eme PAS-------------------------------------------------------------------- -->		
+	
+		        <article class="blog-article" data-theme="gite">
+            <span class="blog-meta">
+                <span class="badge badge-gite">Actu du Gîte</span> Actions de 2022
+            </span>
+            <h2>le deuxième pas</h2>
+			<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+			
+            <p>Assez rapidement l'exigüité des lieux empêche l'dée des containers : trop haut s'ils sont supperposés, trop petit s'il n'y en a qu'un.</br>
+			Pendant un temps c'est le garage qui est envisager. Ce process est long et fastidueux, pendant de nombreuse année un étudiant de l'<a href="https://www.rennes.archi.fr/" target="_blank">ENSAB de Rennes</a> m'accompagne mais entres ses études et les projets qu'il doit mener le projet végette et n'avance pas. Il fait néanmoins une cartographie et des mesures précises de notre maison</p>
+			    <figure style="max-width: 600px; margin: 25px auto; text-align: center; display: block;">
+        <img src="photos/blog/actu du gite/plan de masse de la maison du XVIIème siècle.jpg" alt="Plan de masse de la maison du XVIIème siècle en noir et blanc" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+        
+        <figcaption style="font-family: Arial, sans-serif !important; font-size: 0.85rem !important; color: #555555 !important; font-style: italic !important; display: block !important; text-align: center !important; margin-top: 8px !important;">
+            Le plan de masse de mon architecte étudiant réalisé lors de notre coopération.
+        </figcaption>
+    </figure>
+       
+
+	   </article>
+	   
+	   <!-- article suivant ------------------PREMIERS PAS------------------------------------------------------------- -->
+	
+	        <article class="blog-article" data-theme="gite">
+            <span class="blog-meta">
+                <span class="badge badge-gite">Actu du Gîte</span> Actions de 2022
+				
+            </span>
+            <h2>les premiers pas</h2><a href="#construction">En savoir plus sur la construction du studio</a>
+			
+            <p>la première idée c'est le container aménagé : économique, écologie et original il peut s'aménager en chambre d'hôtes et devenir chambre médicale assez facilement. Les premiers contacts sont pris et je m'amuse <a href="https://www.leroymerlin.fr/outils-projet/maison/creez-votre-plan-maison-3d.html" target="_blank">sur un site qui sera repris ensuite par leroy merlin</a>.</p> : KOZIKAZA. A l'époque pas d'ia et on trace les traits avec sa souris qui projette ensuite une vue 3D (une révolution à l'époque). L'idée est de poser deux containers de 20 pieds l'un sur l'autre de les faire se confondre avec le garage centenaire à coté </p> 
+			<figure style="max-width: 600px; margin: 25px auto; text-align: center; display: block;">
+			<img src="photos/blog/actu du gite/1ère idée maison container de 20 pieds aménagée.jpg" alt="la modélisation de la maison constituée de deux containers de 20 pieds l'un sur l'autre" style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px auto;">
+			<figcaption style="font-family: Arial, sans-serif !important; font-size: 0.85rem !important; color: #555555 !important; font-style: italic !important; display: block !important; text-align: center !important; margin-top: 8px !important;">
+            Le modélisation de nos containers grâce à mon amie Gwen.
+			</figcaption>
+    </figure>       
+
+	   </article>
+	   
+	   <!-- article suivant --------------LANCEMENT DU PROJET----------------------------------------------------------------- -->
+        
+        <article class="blog-article" data-theme="gite">
+            <span class="blog-meta">
+                <span class="badge badge-gite">Actu du Gîte</span> réflexion de 2020
+            </span>
+            <h2>Lancement du projet</h2>
+			<a href="#construction" style="display: inline-block; margin-bottom: 15px; font-weight: bold;">En savoir plus sur la construction du studio</a>
+            <p>Cela fait des années qu'une idée d'un logement adjacent au notre est né. Il trouve son origine dans un article de presse paru quelques années auparavant <a href="https://actu.fr/normandie/mont-saint-aignan_76451/normandie-ils-inventent-la-maison-de-retraite-au-fond-du-jardin_677328.html" target="_blank">sur l'histoire d'une fille qui évite l'EHPAD à ses parents</a>.</p> Si mes parents sont toujours vaillant et en pleine forme et toujours en couple, ma belle-mère est déjà veuve et à des milliers de kilomètres. En parallèle ma grands mère est justement <a href="https://www.lesjardinsducastel.com/" target="_blank">en EHPAD à Châteaugiron</a>.</p> et même si celui-ci est d'une grande qualité les places sont chères et la garantie d'avoir une place n'est pas systématique </p>
+        </article>
+
+        <article class="blog-article" data-theme="local">
+            <span class="blog-meta">
+                <span class="badge badge-actu">Actu Locale</span> Publié le 18 juin 2026
+            </span>
+            <h2>Le marché de la Guerche</h2>
+            <p>La saison estivale démarre fort ! Dès cette semaine, retrouvez les producteurs locaux lors des marchés de la région. C'est l'occasion idéale pour les voyageurs de découvrir les saveurs de notre terroir breton : cidres artisanaux, galettes de blé noir traditionnelles et fromages locaux.</p>
+        </article>
+
+
+<!-- article suivant -------------------BASE DU DVP DURABLE------------------------------------------------------------ -->
+        
+		<article class="blog-article" data-theme="ecolo">
+            <span class="blog-meta">
+                <span class="badge badge-ecolo">Développement Durable</span> Publié le 12 juin 2026
+            </span>
+            <h2>Nos engagements pour un séjour zéro déchet au Studio</h2>
+            <p>Parce que la préservation de notre environnement <a href="propos.html">est au cœur de nos valeurs</a>, le Studio Le Pêcher poursuit sa transition écologique. Pour réduire l'empreinte carbone de vos vacances, nous mettons gratuitement à votre disposition un composteur au fond du jardin ainsi que des bacs de tri sélectif ou le verre, les bouteilles platiques, et les emballages sont séparés.<br>
+			Il y a aussi un bac déchet organique pour nourrir les poules et pouvoir parfois vous donner des oeufs. <br>
+			Réduire les déchets c'est aussi réduire les emballages :<br>
+			-la cafetière qui moud le grain et produit du compost<br>
+			- l'épicerie de base pour ne pas avoir à acheter des produits inutiles (sel, poivre, huile, farine) c'est acheté en gros de notre coté et nous rechargeons ainsi les bocaux mis à votre disposition</p>
+        </article>
+
+
+
+    </div>
+<!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
+
+
+    <section class="newsletter-box">
+        <h3>🌱 Restez informé !</h3>
+        <p>Inscrivez-vous à notre newsletter pour recevoir les prochains événements locaux et nos conseils écoresponsables.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="newsletter-form">
+            <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+            <input type="hidden" name="subject" value="Nouvelle inscription à la Newsletter du Blog !">
+            <input type="checkbox" name="botcheck" style="display: none;">
+            <input type="email" name="email_newsletter" class="newsletter-input" placeholder="Votre adresse e-mail principale..." required>
+            <button type="submit" class="newsletter-btn">S'abonner à la newsletter</button>
+        </form>
+    </section>
+<!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
+</main>
+
+<!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
+
+	<footer>
+    <div style="margin-bottom: 1.5rem;">
+        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px;">À Propos</a> | 
+        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px;">Blog & Actu</a> | 
+        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px;">☎️ Numéros Utiles</a>
+    </div>
+    <p>&copy; 2026 Le relais de poste 35 - juin 2026 - Tous droits réservés.</p>
+</footer>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                // Ajouter la classe active sur le bouton cliqué
+                button.classList.add('active');
+
+                const filtreSelectionne = button.getAttribute('data-filter');
+                const articles = document.querySelectorAll('.blog-article');
+
+                articles.forEach(article => {
+                    const themeArticle = article.getAttribute('data-theme');
+                    
+                    if (filtreSelectionne === 'all' || themeArticle === filtreSelectionne) {
+                        article.style.display = 'block'; // On affiche
+                    } else {
+                        article.style.display = 'none';  // On cache
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Gastronomie - Où manger ?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            border-bottom: 1px solid #eaeaea;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover { color: #000; }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- LE STYLE DES CATÉGORIES (CHIADÉ) --- */
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Badges de couleur pour s'y retrouver */
+        .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .badge-fast { background-color: #fed7d7; color: #9b2c2c; }
+        .badge-trad { background-color: #feebc8; color: #9c4221; }
+        .badge-luxe { background-color: #e2e8f0; color: #2d3748; }
+
+        .resto-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .resto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .resto-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .btn-map:hover { background-color: #cbd5e0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="photos/general/logo.png" alt="logo le relais de poste 35" style="height: 220px; width: auto;">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="offre.html">L'Offre</a></li>
+                <li><a href="tarifs.html">Services & Tarifs</a></li>
+                <li><a href="tourisme.html">Tourisme</a></li>
+                <li><a href="propos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog & Actu</a></li>
+                <li><a href="english.html" style="display: flex; align-items: center; gap: 5px;"><img src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="UK Flag"> English</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+	
+	<div style="background-color: #fffaf0; border-left: 4px solid #dd6b20; color: #dd6b20; padding: 15px; margin: 20px auto 0 auto; max-width: 800px; border-radius: 4px; box-sizing: border-box; font-family: Arial, sans-serif;">
+    <p style="margin: 0; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+        🚧 Page en cours de création
+    </p>
+    <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #718096;">
+        Les photos et les itinéraires précis arrivent très vite ! Pour le moment, les liens de localisation Google Maps sont temporairement désactivés. Merci de votre patience.
+    </p>
+</div>
+
+<div class="navigation-tourisme" style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+    <a href="#section-tradition" style="padding: 10px 15px; background: #d97706; color: white; border-radius: 20px; text-decoration: none; font-weight: bold;">🥞 Crêperies & Tradition</a>
+	<a href="#section-gastro" style="padding: 10px 15px; background: #c5a880; color: white; border-radius: 20px; text-decoration: none; font-weight: bold;">✨ Gastronomie & Exception</a>
+	<a href="#section-fastfood" style="padding: 10px 15px; background: #d32f2f; color: white; border-radius: 20px; text-decoration: none; font-weight: bold;">🍔 Sur le pouce / Fast Food</a>
+    <a href="#section-marches" style="padding: 10px 15px; background: #2e7d32; color: white; border-radius: 20px; text-decoration: none; font-weight: bold;">🍏 Marchés Locaux</a>
+	
+	
+</div>
+        
+        <h1>Art & Gastronomie locale</h1>
+        <p class="intro-text">Parce qu'on peut avoir envie d'un grand menu après une rando ou d'un burger devant un film au gîte, voici nos adresses testées et approuvées à Châteaubourg et alentours !</p>
+
+
+<!-- CIBLE 4 : CRÊPERIES & TRADITION -->
+<div id="section-tradition" class="section-title">🥞 Crêperies & Cuisine Traditionnelle</div>
+
+<!-- LE RESTAURANT DE DOMAGNÉ -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>🥩🍛🍷 Le Raison (&lt; 1 km)</h3>
+        <span class="badge badge-tradition">Traditionnel / Terroir</span>
+    </div>
+    <p>Le rendez-vous gourmand des Domagnéens, situé à deux pas du gîte ! Cet établissement propose une cuisine traditionnelle et familiale de qualité, généreuse et conviviale. Une adresse parfaite pour un repas de terroir authentique au cœur du village. 🥩🍛🍷</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 9 Place de l'Église, 35113 Domagné<br>
+        <strong>📞 Contact :</strong> 02 99 00 01 24<br>
+        <strong>🕒 Horaires :</strong> Ouvert le midi en semaine. Fermé le week-end.<br>
+        <strong>💡 Conseil :</strong> Une formule au top avec un excellent rapport qualité-prix pour le déjeuner. Idéal pour manger local sans prendre la voiture !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Le+Raison+Domagne" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>🥩🍛🍷 Barbakoa (~6 km)</h3>
+        <span class="badge badge-luxe">Brasero & Grillades</span>
+    </div>
+    <p>Le paradis des amateurs de viande et de cuisson au brasero ! Ce restaurant propose une cuisine de caractère, brute et savoureuse, où les belles pièces de viande et les produits de saison sont sublimés par le feu de bois. Une ambiance ultra-conviviale et un cadre soigné. 🥩🔥🍷</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 2 Rue de la Paix, 35410 Châteaugiron<br>
+        <strong>📞 Contact :</strong> 02 99 37 65 31 — <a href="https://www.barbakoa.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Ouvert midi et soir en semaine et le week-end (fermé le lundi ou selon saison, à vérifier sur leur site).<br>
+        <strong>💡 Conseil :</strong> Si vous aimez les viandes maturées et les cuissons maîtrisées au feu de bois, c'est l'adresse phare du coin. Pensez à réserver, le concept plaît énormément !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Barbakoa+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>🍷🧀🥖 Le Cellier (~6 km)</h3>
+        <span class="badge badge-luxe">Cave & Bar à Vins</span>
+    </div>
+    <p>La superbe adresse de Châteaugiron pour les épicuriens ! À la fois cave fine et bar à vins chaleureux, c'est l'endroit idéal pour partager une planche de charcuteries et de fromages affinés tout en dégustant un bon cru sélectionné avec passion.</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 19 Rue de la Madeleine, 35410 Châteaugiron<br>
+        <strong>📞 Contact :</strong> 02 99 37 42 17<br>
+        <strong>🕒 Horaires :</strong> Ouvert en journée et en soirée du mardi au samedi. Fermé dimanche et lundi.<br>
+        <strong>💡 Conseil :</strong> Parfait pour un apéro dînatoire convivial ou pour aller chercher une bonne bouteille locale ou un coffret cadeau à ramener de vacances !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Le+Cellier+de+la+Harpe+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- CRÊPERIE DU CHÂTEAU - CHÂTEAUGIRON -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>🥞🍯🥂 Crêperie du Château (~6 km)</h3>
+        <span class="badge badge-tradition">Galettes & Crêpes</span>
+    </div>
+    <p>Installée au pied des remparts médiévaux de Châteaugiron, cette crêperie est réputée pour ses galettes de blé noir croustillantes et généreusement garnies. Un décor typique et chaleureux pour s'offrir un vrai moment breton !</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 11 Rue de la Madeleine, 35410 Châteaugiron<br>
+        <strong>📞 Contact :</strong> 02 99 37 43 73<br>
+        <strong>🕒 Horaires :</strong> Ouvert du mardi au samedi (12h-13h45 / 19h-21h30). Fermé dimanche et lundi.<br>
+        <strong>💡 Conseil :</strong> Demandez une table à l'étage pour une jolie vue ou pensez à réserver, l'adresse est très courue. Un cidre local accompagne merveilleusement le repas !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Creperie+du+Chateau+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- L'ALAMBIC - CHÂTEAUBOURG -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Crêperie L'Alambic (~4 km)</h3>
+        <span class="badge badge-tradition">Galettes & Crêpes</span>
+    </div>
+    <p>Une charmante crêperie artisanale située à Châteaubourg. On y travaille des farines locales de haute qualité pour proposer des galettes savoureuses, des recettes traditionnelles aux plus créatives, le tout dans une ambiance intime et conviviale. 🧈🍏</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 10 Rue du Maréchal Leclerc, 35220 Châteaubourg<br>
+        <strong>📞 Contact :</strong> 02 99 00 37 34 — <a href="https://www.creperie-lalambic.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Ouvert du mardi au samedi midi et soir. Fermé dimanche et lundi.<br>
+        <strong>💡 Conseil :</strong> Leurs spécialités sucrées au caramel au beurre salé maison sont un incontournable pour finir le repas en beauté.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Creperie+L+Alambic+Chateaubourg" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<div id="section-gastro" class="section-title">✨ Plaisir / Gastronomie / Cadre d'exception</div>
+		
+		
+		
+		
+				<div class="resto-item">
+    <div class="resto-header">
+        <h3>🍔🏆✨ Le Cella (~4 km)</h3>
+        <span class="badge badge-resto">Bistrot / Terroir</span>
+    </div>
+    <p>Ce <a href="https://www.cella-bistrot.fr/" target="_blank">charmant bistrot de village</a> cultive la convivialité et le goût du partage. Sacré parmi les champions de la Coupe de France du Burger, l'établissement régale avec une cuisine maison, de saison et d'une gourmandise absolue.</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 11 Place de l'Église, 35410 Ossé (Châteaugiron)<br>
+		<strong>🕒 Horaires :</strong> Du lundi au mercredi (12h-14h) | Jeudi et vendredi (12h-14h et 19h-21h30) | Fermé samedi et dimanche.<br>
+		<strong>📞 Contact :</strong> 02 99 37 40 18 — <a href="https://www.facebook.com/bistrotcella" target="_blank">Page Facebook</a>, <a href="https://www.cella-bistrot.fr/" target="_blank">site internet.</a><br>
+        <strong>💡 Conseil :</strong> Ne passez pas à côté de leurs burgers signatures. Pensez à réserver, la salle se remplit vite le midi !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Cella+Osse&query_place_id=ChIJp3WNkp8pD0gRn89zG49WGqg" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/le-cella-osse-2.jpg" 
+             alt="Le restaurant Cella à Ossé et ses burgers de champion" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            Intérieur du restaurant Cella à Ossé
+        </figcaption>
+    </figure>
+</div>
+		<!-- FIN DE SECTION Cella------------------------------------------------------------------------------- -->
+		
+		<div class="resto-item">
+    <div class="resto-header">
+        <h3>🍽️✨🌱 La Table du Pavail (~6 km)</h3>
+        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+    </div>
+    <p>Une magnifique adresse nichée à Saint-Aubin-du-Pavail. Le chef y propose une cuisine bistronomique créative, moderne et raffinée, qui sublime avec passion et finesse les circuits courts et les producteurs du terroir breton.</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 202 Rue de la Mairie, 35410 Châteaugiron (Saint-Aubin-du-Pavail)<br>
+        <strong>📞 Contact :</strong> 02 23 07 67 78 — <a href="https://www.latabledupavail.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Mercredi (19h15-21h) | Jeudi et Vendredi (12h-15h30, 19h15-21h) | Samedi (19h15-21h) | Dimanche (12h-14h30) | Fermé lundi et mardi.<br>
+        <strong>💡 Conseil :</strong> Idéal pour les repas soignés ou les gourmets en quête de belles découvertes culinaires. La réservation est indispensable.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=La+Table+du+Pavail+Chateaugiron&query_place_id=ChIJRcwAaaMpD0gRSUP7G1o3ajk" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/restaurant-table-du-pavail-chateaugiron.jpg" 
+             alt="Assiette bistronomique raffinée à La Table du Pavail" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            La Table du Pavail à Saint-Aubin-du-Pavail
+        </figcaption>
+    </figure>
+</div>
+
+<!-- FIN DE SECTION la table du pavail------------------------------------------------------------------------------- -->
+
+
+
+
+		
+		<div class="resto-item">
+    <div class="resto-header">
+        <h3>Le Château des Pères (~6 km)</h3>
+        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+    </div>
+    <p>Un <a href="https://www.chateaudesperes.fr/" target="_blank">domaine unique</a> à Piré-Chancé : parc de sculptures monumentales en accès libre, ateliers d'artisans d'art et tables renommées.</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Domaine du Château des Pères, 35150 Piré-Chancé<br>
+        <strong>📞 Contact :</strong> 02 23 08 40 80 — <a href="https://www.chateaudesperes.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Parc des sculptures ouvert tous les jours en accès libre (9h-18h/20h selon saison). Restaurants fermés les lundis et mardis.<br>
+        <strong>💡 Conseil :</strong> Réservation très fortement recommandée pour les tables (Le Re-Père ou la table étoilée). Idéal pour une belle promenade ou une grande occasion.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Domaine+du+Chateau+des+Peres&query_place_id=ChIJI11yowAsD0gRZSfI3RQP7OM" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/pire-le-chateau-des-peres.jpg" 
+             alt="le château des pères avec ses jardins et son hôtel de luxe" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            Vue du château des Pères
+        </figcaption>
+    </figure>
+</div>
+		<!-- FIN DE SECTION les pères------------------------------------------------------------------------------- -->
+		
+
+		
+
+		
+		<div class="resto-item">
+    <div class="resto-header">
+        <h3>L'Auberge des Tilleuls (~4 km)</h3>
+        <span class="badge badge-resto">Traditionnel / Terroir</span>
+    </div>
+    <p>Une véritable institution locale nichée au cœur du village. Cette charmante auberge propose une cuisine traditionnelle généreuse et soignée, mettant à l'honneur les produits frais de saison dans un cadre chaleureux et convivial. 🍽️🥩✨</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 4 Route de la Chapelle, 35680 Piré-Chancé<br>
+        <strong>📞 Contact :</strong> 02 99 00 02 22 — <a href="https://www.aubergedestilleuls.com/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Lundi, mardi, jeudi, vendredi et dimanche (12h-13h30) | Samedi (12h-13h15 et 19h30-20h30) | Fermé le mercredi.<br>
+        <strong>💡 Conseil :</strong> Une valeur sûre pour un repas de famille ou un déjeuner d'affaires au calme. Pensez à réserver à l'avance !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Auberge+Des+Tilleuls+Pire+Chance&query_place_id=ChIJ52Px0fwqD0gRmd0qenA38AI" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/auberge-des-tilleuls.jpg" 
+             alt="Façade ou salle chaleureuse de l'Auberge des Tilleuls" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            L'Auberge des Tilleuls à Piré-Chancé
+        </figcaption>
+    </figure>
+</div>
+		
+		<!-- FIN DE SECTION l auberge------------------------------------------------------------------------------- -->
+		
+	
+		
+	<div class="resto-item">
+    <div class="resto-header">
+        <h3>Ar Milin' (~4 km)</h3>
+        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+    </div>
+    <p>Une table incontournable nichée au cœur d'un parc arboré de 5 hectares. Le restaurant propose une cuisine bistronomique de saison, raffinée et inventive, à déguster dans un cadre enchanteur en bordure de rivière. 🌳🍽️🌊</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 30 Rue de Paris, 35220 Châteaubourg<br>
+        <strong>📞 Contact :</strong> 02 99 00 30 91 — <a href="http://www.armilin.com/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Du lundi au samedi (12h-14h et 19h-21h) | Dimanche (12h-14h).<br>
+        <strong>💡 Conseil :</strong> Profitez-en pour vous balader dans leur magnifique parc de sculptures avant ou après le repas. Une superbe expérience visuelle et gustative !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Ar+Milin+-+Le+Bistrot&query_place_id=ChIJw1QyCmnVDkgRXsG5kaPvR-Y" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/hotel-ar-milin-chateaubourg.jpg" 
+             alt="Le restaurant et moulin Ar Milin au cœur de son grand parc à Châteaubourg" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            Le domaine d'Ar Milin' à Châteaubourg
+        </figcaption>
+    </figure>
+</div>	
+
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Le Cellier (~4 km)</h3>
+        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+    </div>
+    <p>Une superbe adresse à Châteaubourg pour les amateurs de bonne cuisine et de bons vins. Le chef y propose une cuisine bistronomique créative, moderne et rythmée par les saisons, accompagnée d'une très belle sélection de crus. Un régal dans une ambiance feutrée et conviviale. 🥩🍷✨</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 11 Route de Vitré, 35220 Châteaubourg<br>
+        <strong>📞 Contact :</strong> 02 99 62 31 77 — <a href="https://www.lecellier-chateaubourg.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Ouvert du mardi au samedi (midi et soir). Fermé dimanche et lundi.<br>
+        <strong>💡 Conseil :</strong> Comme son nom l'indique, laissez-vous conseiller sur les accords mets-vins, la cave recèle de pépites. Réservation vivement conseillée.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Le+Cellier+Chateaubourg" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+
+
+
+
+		
+		<!-- CIBLE 3 : LE FAST FOOD -->
+<div id="section-fastfood" class="section-title">🍔 Sur le pouce / Restauration Rapide</div>
+
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>🚚🍕🌯🥞 Les Camions & Food-Trucks Locaux (&lt; 1 km)</h3>
+        <span class="badge badge-fastfood">À emporter / Itinérant</span>
+    </div>
+    <p>Pas envie de cuisiner ou de prendre la voiture ? Plusieurs camions gourmands s'installent directement sur les places de nos villages en fin de journée. Une alternative pour un repas chaud et convivial au gîte !</p>
+    <div class="meta-info">
+        <strong>🍕 Les Pizzas :</strong> 
+        Le camion pizza s'installe généralement à Domagné ou à Ossé en fin de semaine (suivre les panneaux à l'entrée du bourg). Vous y trouverez des pizzas artisanales cuites au four. <br>
+        
+        <strong>🌯 Tacos & Burgers :</strong> 
+        Des food-trucks de burgers locaux ou de street-food (tacos/kebabs) font régulièrement étape sur les parkings des communes alentours ou lors des petits marchés de pays.<br>
+        
+        <strong>🥞 Galettes & Crêpes :</strong> 
+        Ne manquez pas le camion de galettes à emporter, présent notamment sur le marché de producteurs d'Ossé le mercredi soir. Idéal pour acheter ses galettes-saucisses bien chaudes ou ses crêpes au froment à la douzaine !<br><br>
+        
+        <strong>💡 Conseil :</strong> Les jours de passage et les horaires pouvant parfois varier selon la saison, jetez un coup d'œil au panneau lumineux de la mairie au centre du bourg de Domagné ou demandez-nous les dépliants mis à jour dans le gîte !
+    </div>
+</div>
+
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Crescendo Cafétéria (~6 km)</h3>
+        <span class="badge badge-fastfood">Cafétéria / Libre-service</span>
+    </div>
+    <p>Une formule de restauration rapide, variée et équilibrée juste à côté de l'hypermarché. Avec ses grands buffets d'entrées et de desserts, ses grillades cuites à la minute et ses légumes à volonté, c'est une option simple et efficace qui plaît beaucoup aux enfants. 🥩🥗🍰</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Centre Commercial Hyper U, 35410 Châteaugiron<br>
+        <strong>📞 Contact :</strong> 02 99 37 54 99 — <a href="https://www.crescendo-restauration.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Ouvert du lundi au samedi (11h45 - 14h00 / 18h30 - 21h00). Fermé le dimanche.<br>
+        <strong>💡 Conseil :</strong> Idéal pour un repas de midi sans chichis, économique et particulièrement adapté pour les familles nombreuses.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Crescendo+Resto+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- Kébab chateauG -->
+
+<!-- KEBAB CHÂTEAUGIRON -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Château Kebab (~6 km)</h3>
+        <span class="badge badge-fastfood">Kebab & Sandwiches</span>
+    </div>
+    <p>Une adresse incontournable du centre-ville pour les amateurs de street-food. Installé à deux pas du château médiéval, ce fast-food propose de généreux kebabs (galettes ou pains), burgers, paninis et frites. Service rapide et accueil très chaleureux ! 🌯🍟🥙</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> 6 Rue de la Madeleine, 35410 Châteaugiron<br>
+        <strong>📞 Contact :</strong> 02 99 37 38 65<br>
+        <strong>🕒 Horaires :</strong> Ouvert du mardi au dimanche, midi et soir (11h30 - 14h00 / 18h00 - 22h00). Fermé le lundi.<br>
+        <strong>💡 Conseil :</strong> Idéal pour une faim de loup après avoir visité le centre historique de Châteaugiron. Vous pouvez commander par téléphone pour éviter l'attente aux heures de pointe !
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Chateau+Kebab+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+
+<!-- LE KIOSQUE À PIZZAS - CHÂTEAUBOURG & CHÂTEAUGIRON -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Le Kiosque à Pizzas (~4 km)</h3>
+        <span class="badge badge-fastfood">Pizzas à emporter</span>
+    </div>
+    <p>Parfait pour une soirée pizza improvisée au gîte. Situé à Châteaubourg, ce kiosque artisanal prépare vos pizzas sous vos yeux avec une pâte fraîche pétrie chaque jour sur place et des ingrédients généreux. 🍕🔥</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Parking de l'Intermarché, 35220 Châteaubourg<br>
+        <strong>📞 Contact :</strong> 02 99 62 31 16<br>
+        <strong>🕒 Horaires :</strong> Ouvert 7j/7 (11h30 - 13h30 / 18h00 - 21h30, jusqu'à 22h00 le week-end).<br>
+        <strong>💡 Conseil :</strong> Appelez en fin d'après-midi pour réserver votre heure de retrait, les créneaux partent très vite le week-end ! Un distributeur automatique de pizzas fraîches est aussi dispo 24h/24 à Châteaugiron si besoin.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Le+Kiosque+a+Pizzas+Chateaubourg" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- MCDONALD'S / SUBWAY - CHÂTEAUBRIAND / CHÂTEAUGIRON -->
+<!-- MCDONALD'S CHÂTEAUGIRON -->
+<!-- BURGER KING CHÂTEAUGIRON -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Burger King Châteaugiron (~6 km)</h3>
+        <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+    </div>
+    <p>Pour les amateurs de burgers grillés à la flamme et du célèbre Whopper. Parfait pour une halte rapide lors de vos sessions shopping dans la zone de Châteaugiron. 👑🍔🍟</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Zone Commerciale Univers, 35410 Châteaugiron<br>
+        <strong>🕒 Horaires :</strong> Ouvert 7j/7 de 11h00 à 23h00 (jusqu'à minuit le week-end). Drive disponible.<br>
+        <strong>💡 Option :</strong> Service rapide sur bornes et commande en ligne possible via leur application officielle.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Burger+King+Chateaugiron" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- BURGER KING JANZÉ -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Burger King Janzé (~15 km)</h3>
+        <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+    </div>
+    <p>Idéal si vous vous déplacez vers le sud du secteur (axe Rennes-Angers). L'enseigne propose toute sa gamme de menus iconiques avec service Drive pour les plus pressés. 👑🍟</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Zone d'Activités de la Chauvelière, 35150 Janzé<br>
+        <strong>🕒 Horaires :</strong> Ouvert tous les jours de 11h00 à 23h00 (Drive prolongé le week-end).<br>
+        <strong>💡 Astuce :</strong> Facile d'accès avec un grand espace de stationnement en périphérie de la ville.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Burger+King+Janze" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+
+
+<!-- MCDONALD'S SERVON-SUR-VILAINE -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>McDonald's Servon-sur-Vilaine (~7 km)</h3>
+        <span class="badge badge-fastfood">Fast-Food / Drive</span>
+    </div>
+    <p>Situé stratégiquement le long de l'axe Rennes-Paris (N157), ce restaurant est parfait pour une pause gourmande rapide à l'arrivée ou au départ du gîte. 🚗🍦</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Zone Artisanale de l'Islet, 35530 Servon-sur-Vilaine (Près de l'axe Rennes-Vitré)<br>
+        <strong>🕒 Horaires :</strong> Ouvert 7j/7 de 10h00 à 23h00.<br>
+        <strong>💡 Pratique :</strong> Très facile d'accès depuis la quatre-voies, idéal pour un repas sur le pouce au Drive ou en salle.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=McDonalds+Servon+sur+Vilaine" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+<!-- MCDONALD'S VERN-SUR-SEICHE -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>McDonald's Vern-sur-Seiche (~15 km)</h3>
+        <span class="badge badge-fastfood">Fast-Food / Drive</span>
+    </div>
+    <p>Une option pratique si vous revenez d'une balade au sud de Rennes ou de la rocade, situé dans la zone commerciale du Val de Seiche. 🥤🍗</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Parc d'Activités du Val de Seiche, 35770 Vern-sur-Seiche<br>
+        <strong>🕒 Horaires :</strong> Ouvert 7j/7 de 10h00 à 23h00 (minuit le week-end). Drive efficace.<br>
+        <strong>💡 Note :</strong> Un grand parking et toutes les options habituelles de commande (bornes, application).
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=McDonalds+Vern+sur+Seiche" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+
+
+
+
+        <div class="resto-item">
+            <div class="resto-header">
+                <h3>Le Kebab Local - Châteaubourg (~6 km)</h3>
+                <span class="badge badge-fast">Kebab / Tacos</span>
+            </div>
+            <p>Un bon kebab classique, généreux en sauce blanche et frites, idéal pour emporter et manger chaud au gîte.</p>
+            <div class="meta-info">
+                <strong>📍 Adresse :</strong> Centre-ville, 35220 Châteaubourg<br>
+                <strong>🕒 Astuce :</strong> Pensez à commander par téléphone le week-end pour éviter l'attente !
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+        </div>
+		
+		<div class="resto-item">
+    <div class="resto-header">
+        <h3>Roadside Burgers (~4 km)</h3>
+        <span class="badge badge-fastfood">Burgers & Hot-Dogs</span>
+    </div>
+    <p>Le célèbre "fast-food à l'américaine" revisité version locale. Les burgers, hot-dogs et frites maison sont préparés à la commande avec de la viande bovine française fraîche et du pain artisanal. Un régal rapide et efficace ! 🍔🍟🥤</p>
+    <div class="meta-info">
+        <strong>📍 Adresse :</strong> Zone de l'Asse, 35220 Châteaubourg (Près du Hyper U)<br>
+        <strong>📞 Contact :</strong> 02 99 04 52 35 — <a href="https://www.roadside.fr/" target="_blank">Site Internet</a><br>
+        <strong>🕒 Horaires :</strong> Ouvert 7j/7, midi et soir (11h45 - 14h00 / 18h45 - 21h30, jusqu'à 22h00 le week-end).<br>
+        <strong>💡 Conseil :</strong> Idéal pour un repas rapide sur place, à emporter ou au Drive en sortant de la quatre-voies.
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Roadside+Chateaubourg" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+<!-- PHOTO ------------------------------------------------------------------------------- -->
+    <figure style="margin: 15px 0; max-width: 100%;">
+        <img src="photos/tourisme/chateaubourg-roadside.jpg" 
+             alt="Burgers et frites maison chez Roadside Châteaubourg" 
+             style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+        <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+            Roadside Burgers à Châteaubourg
+        </figcaption>
+    </figure>
+</div>
+
+
+
+
+<!-- TITRE DE LA SECTION MARCHÉS -->
+<div id="section-marches" class="section-title">🍏 Les Marchés Locaux & Terroir</div>
+
+<!-- CHÂTEAUGIRON -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Marché de Châteaugiron</h3>
+        <span class="badge badge-marche">Jeudi matin</span>
+    </div>
+    <p>Le grand rendez-vous de la semaine ! Un beau marché d'une quarantaine de commerçants qui s'anime place des Gâtes. On y trouve une offre très variée pour remplir son panier. 🧺🧀</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les jeudis (8h00 - 13h30)<br>
+        <strong>🍎 Sur les étals :</strong> Fruits et légumes frais, boucherie-charcuterie, rôtisserie, poissons, fromages, produits de la ferme, traiteur asiatique, mais aussi vêtements et plants de fleurs.
+    </div>
+</div>
+
+<!-- OSSÉ -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Marché de producteurs d'Ossé</h3>
+        <span class="badge badge-marche">Mercredi soir</span>
+    </div>
+    <p>Un petit marché de fin de journée convivial et 100% axé sur la proximité, idéal pour faire ses courses en sortant du travail directement sur la place de l'Église. 🥖🍓</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les mercredis (à partir de 17h00)<br>
+        <strong>🍎 Sur les étals :</strong> Producteurs locaux, maraîchers (primeurs), boucher-charcutier et d'excellentes galettes et crêpes à emporter.
+    </div>
+</div>
+
+<!-- DOMAGNÉ & SAINT-AUBIN DU PAVAIL -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Les rendez-vous de Domagné & St-Aubin</h3>
+        <span class="badge badge-marche">Circuits courts</span>
+    </div>
+    <p>Pour Domagné et Saint-Aubin-du-Pavail, la proximité prime via les commerces locaux, les ventes à la ferme aux alentours et les marchés phares voisins (comme Ossé le mercredi ou Châteaubourg le vendredi). 🌱🐓</p>
+    <div class="meta-info">
+        <strong>🕒 Astuce :</strong> Privilégiez les paniers de producteurs locaux en direct des fermes environnantes pour les légumes bios, les œufs frais et le cidre artisanal du coin.
+    </div>
+</div>
+
+<!-- JANZÉ -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Marché traditionnel de Janzé</h3>
+        <span class="badge badge-marche">Mercredi matin</span>
+    </div>
+    <p>Un grand marché séculaire et chaleureux qui s'installe en plein air et sous les halles couvertes de la Place des Halles. Une quarantaine d'exposants au rendez-vous. 🥚🍗</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les mercredis (7h00 - 13h00)<br>
+        <strong>🍎 Sur les étals :</strong> Grand choix de produits alimentaires du terroir (dont le célèbre poulet de Janzé !), produits laitiers de la ferme et étals non-alimentaires.
+    </div>
+</div>
+
+<!-- NOUVOITOU -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Le p'tit marché de Nouvoitou</h3>
+        <span class="badge badge-marche">Vendredi après-midi</span>
+    </div>
+    <p>Le marché parfait pour débuter le week-end en douceur, axé sur les produits frais de saison pour préparer ses repas de fin de semaine. 🥦🥩</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les vendredis (15h00 - 18h00)<br>
+        <strong>🍎 Sur les étals :</strong> Primeurs locaux, fromagers, traiteurs et artisans de bouche selon les semaines.
+    </div>
+</div>
+
+<!-- LA GUERCHE-DE-BRETAGNE -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Le mythique Marché de La Guerche</h3>
+        <span class="badge badge-marche">Mardi matin</span>
+    </div>
+    <p>Une véritable institution en Bretagne historique ! C'est l'un des plus vieux et des plus grands marchés de la région (plus de 100 exposants). Une ambiance de foire incroyable au centre-ville. 🎪🐖✨</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les mardis (8h30 - 13h00)<br>
+        <strong>🍎 Sur les étals :</strong> Absolument tout ! Maraîchers, producteurs de galettes, poissonniers, fromages locaux, ainsi qu'un immense déballage de vêtements, mercerie, tissus et quincaillerie. Un incontournable.
+    </div>
+</div>
+
+<!-- VITRÉ -->
+<div class="resto-item">
+    <div class="resto-header">
+        <h3>Marché de Vitré</h3>
+        <span class="badge badge-marche">Samedi matin</span>
+    </div>
+    <p>Idéal pour une sortie gourmande le week-end, ce marché s'articule autour de la Place de la République, au cœur de la magnifique cité médiévale. 🥕🐟</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Tous les samedis (8h30 - 13h00) — *Un petit marché d'appoint alimentaire se tient aussi le lundi matin.*<br>
+        <strong>🍎 Sur les étals :</strong> Accent mis sur les producteurs locaux et le bio. Légumes du Pays de Vitré, fromages fermiers, arrivages de poissons frais, pains artisanaux et spécialités locales bretonnes.
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+	
+	<!-- FIN DE SECTION resto luxe------------------------------------------------------------------------------- -->
+<a href="#" style="position: fixed; bottom: 20px; right: 20px; background-color: #333; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); z-index: 999; transition: transform 0.2s;">
+    ⬆️
+</a>
+</body>
+</html>
