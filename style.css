@@ -32,12 +32,14 @@ header {
     z-index: 100;
 }
 
+/* === BLOC MIS À JOUR POUR CENTRER LE LOGO ET LE MENU === */
 nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Ramène le logo et le menu vers le centre */
     align-items: center;
+    gap: 5rem;              /* Crée un espace fixe et propre entre le logo et le menu */
     padding: 1.5rem 2rem;
 }
 
@@ -211,7 +213,7 @@ footer {
 .logement-image {
     width: 100%;
     height: 250px;
-    background-color: #f5f5f5; /* Fond gris en attendant l'image */
+    background-color: #f5f5f5;
     overflow: hidden;
 }
 
@@ -436,7 +438,7 @@ footer {
     }
 }
 .eco-features {
-    grid-column: 1 / -1; /* Prend toute la largeur sur grand écran */
+    grid-column: 1 / -1;
     background-color: #f4f7f5; 
     padding: 2rem;
     border-left: 4px solid #487355;
@@ -474,16 +476,14 @@ footer {
 }
 /* Aération de la page Tourisme avec vos bonnes classes */
 .tourism-card h4 {
-    margin-top: 2rem !important; /* Force l'espace au-dessus de Vitré, Châteaugiron, etc. */
-    margin-bottom: 0.5rem !important; /* Espace léger avant le paragraphe */
+    margin-top: 2rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
-/* Optionnel : pour que le tout premier titre (Vitré) ne soit pas trop collé au grand titre */
 .tourism-card h4:first-of-type {
     margin-top: 1.2rem !important;
 }
 
-/* Espace entre les paragraphes si besoin */
 .tourism-card p {
     margin-bottom: 0; 
     line-height: 1.6;
@@ -510,9 +510,9 @@ footer {
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('votre-image.jpg');
     background-size: cover;
     background-position: center;
-    padding: 1rem 1rem; /* Crée de l'espace haut/bas autour du texte */
-    border-radius: 8px; /* Optionnel : arrondit légèrement les angles de l'image */
-    margin-bottom: 1rem; /* Espace avant les blocs en dessous */
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 /* Force le centrage des textes à l'intérieur */
@@ -521,9 +521,11 @@ footer {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px; /* Évite que le texte s'étale trop sur les grands écrans */
+    max-width: 800px;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+.badge-marche { background-color: #2e7d32; color: white; }
